@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tugas Lab</h1>
+
+    <!-- Input untuk Soal 1 -->
+    <h2>Soal 1: Pengurangan</h2>
+    <label for="soal1_a">Masukkan nilai a: </label>
+    <input type="number" id="soal1_a" value="angka" />
+    <label for="soal1_b">Masukkan nilai b: </label>
+    <input type="number" id="soal1_b" value="angka" />
+    <button onclick="jalankanSoal1()">Hitung</button>
+    <p>Hasil pengurangan: <span id="hasil_soal1"></span></p>
+
+    <!-- Input untuk Soal 2 -->
+    <h2>Soal 2: Operasi Logika OR</h2>
+    <label for="soal2_s">Masukkan nilai s (true/false): </label>
+    <input type="text" id="soal2_s" value="" />
+    <label for="soal2_j">Masukkan nilai j (true/false): </label>
+    <input type="text" id="soal2_j" value="" />
+    <button onclick="jalankanSoal2()">Hitung</button>
+    <p>Hasil operasi logika OR: <span id="hasil_soal2"></span></p>
+
+    <!-- Input untuk Soal 3 -->
+    <h2>Soal 3: Nama Lengkap</h2>
+    <label for="soal3_a">Masukkan nama depan: </label>
+    <input type="text" id="soal3_a" value="nama depan" />
+    <label for="soal3_b">Masukkan nama belakang: </label>
+    <input type="text" id="soal3_b" value="nama belakang" />
+    <button onclick="jalankanSoal3()">Gabungkan</button>
+    <p>Nama lengkap: <span id="hasil_soal3"></span></p>
+
+    <!-- Input untuk Soal 4 -->
+    <h2>Soal 4: Perbandingan Sama</h2>
+    <label for="soal4_k">Masukkan nilai k: </label>
+    <input type="text" id="soal4_k" value="angka" />
+    <label for="soal4_l">Masukkan nilai l: </label>
+    <input type="text" id="soal4_l" value="angka" />
+    <button onclick="jalankanSoal4()">Bandingkan</button>
+    <p>Hasil perbandingan: <span id="hasil_soal4"></span></p>
+
+    <!-- Input untuk Soal 5 -->
+    <h2>Soal 5: Perbandingan Ketat</h2>
+    <label for="soal5_z">Masukkan nilai z: </label>
+    <input type="text" id="soal5_z" value="angka" />
+    <label for="soal5_x">Masukkan nilai x: </label>
+    <input type="text" id="soal5_x" value="angka" />
+    <button onclick="jalankanSoal5()">Bandingkan</button>
+    <p>Hasil perbandingan ketat: <span id="hasil_soal5"></span></p>
+
+    <script>
+      // soal 1
+      function soal1(a, b) {
+        return a - b;
+      }
+      function jalankanSoal1() {
+        let a = parseInt(document.getElementById("soal1_a").value);
+        let b = parseInt(document.getElementById("soal1_b").value);
+        let hasil = soal1(a, b);
+        document.getElementById("hasil_soal1").innerText = hasil;
+      }
+
+      // soal 2
+      function soal2(s, j) {
+        return s || j; // OR (||)
+      }
+      function jalankanSoal2() {
+        let s =
+          document.getElementById("soal2_s").value.toLowerCase() === "true";
+        let j =
+          document.getElementById("soal2_j").value.toLowerCase() === "false";
+        let hasil = soal2(s, j);
+        document.getElementById("hasil_soal2").innerText = hasil;
+      }
+
+      // soal 3
+      function soal3(a, b) {
+        const namaLengkap = a + " " + b;
+        return namaLengkap;
+      }
+      function jalankanSoal3() {
+        let namaDepan = document.getElementById("soal3_a").value;
+        let namaBelakang = document.getElementById("soal3_b").value;
+        let hasil = soal3(namaDepan, namaBelakang);
+        document.getElementById("hasil_soal3").innerText = hasil;
+      }
+
+      // soal 4
+      function soal4(k, l) {
+        return k == l; // memeriksa kesamaan nilai antara a dan b tanpa memperhatikan tipe data
+      }
+      function jalankanSoal4() {
+        let k = document.getElementById("soal4_k").value;
+        let l = document.getElementById("soal4_l").value;
+        let hasil = soal4(k, l);
+        document.getElementById("hasil_soal4").innerText = hasil;
+      }
+
+      // soal 5
+      function soal5(z, x) {
+        return z === x; // === adalah perbandingan ketat alias tidak men-konfersi/mengubah tipe data,
+        // berbeda dengan perbandingan sebelumnya yang menggunakan ==
+      }
+      function jalankanSoal5() {
+        let z = document.getElementById("soal5_z").value;
+        let x = document.getElementById("soal5_x").value;
+        let hasil = soal5(z, x);
+        document.getElementById("hasil_soal5").innerText = hasil;
+      }
+    </script>
+  </body>
+</html>
