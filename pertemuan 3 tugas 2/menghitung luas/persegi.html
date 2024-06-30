@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menghitung luas persegi</title>
+</head>
+<body>
+    <form>
+        <h2>menghitung luas persegi</h2>
+        <table>
+            <tr>
+                <td>masukan sisi persegi</td>
+                <td>:</td>
+                <td><input type="text" id="s" oninput="luas(), kel()" placeholder="masukkan angka"></td>
+            </tr>
+        </table>
+    </form>
+    <p>--------------------------------------------------------------</p>
+
+    <p>Luas persegi adalah = <span id="luas"></span></p>
+    <p>Kelilin persegi adalah = <span id="kel"></span></p>
+    <script>
+        function luas(){
+            var s = document.getElementById('s').value;
+            var luas = s*s;
+            document.getElementById('luas').innerHTML = luas;
+        }
+
+        function kel(){
+            var s = document.getElementById('s').value;
+            var kel = 4*s;
+            document.getElementById('kel').innerHTML = kel;
+        }
+    </script>
+</body>
+</html>

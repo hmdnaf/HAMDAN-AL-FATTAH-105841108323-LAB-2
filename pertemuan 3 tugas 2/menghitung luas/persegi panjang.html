@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menghitung luas persegi panjang</title>
+</head>
+<body>
+    <form>
+        <h2>menghitung luas persegi panjang</h2>
+        <table>
+            <tr>
+                <td>masukan panjang</td>
+                <td>:</td>
+                <td><input type="text" id="p" placeholder="masukkan angka"></td>
+            </tr>
+            <tr>
+                <td>masukan lebar</td>
+                <td>:</td>
+                <td><input type="text" id="l" oninput="luas(), kel()" placeholder="masukkan angka"></td>
+            </tr>
+            <tr>
+                <td>luas persegi panjang adalah</td>
+                <td>:</td>
+                <td><span id="luas"></span></td>
+            </tr>
+            <tr>
+                <td>masukan sisi persegi</td>
+                <td>:</td>
+                <td><span id="kel"></span></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function luas(){
+            var p = document.getElementById('p').value;
+            var l = document.getElementById('l').value;
+
+            var luas = p*l;
+
+            document.getElementById('luas').innerHTML = luas;
+        }
+
+        function kel(){
+            var p = +document.getElementById('p').value;
+            var l = +document.getElementById('l').value;
+
+            var kel = 2*(p+l);
+
+            document.getElementById('kel').innerHTML = kel;
+        }
+    </script>
+</body>
+</html>

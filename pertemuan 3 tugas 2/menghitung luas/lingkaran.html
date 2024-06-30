@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menghitung luas lingkaran</title>
+</head>
+<body>
+    <form>
+        <h2>menghitung luas lingkaran</h2>
+        <table>
+            <tr>
+                <td>masukan jari-jari</td>
+                <td>:</td>
+                <td><input type="number" id="radius" placeholder="Jari-jari lingkaran (cm)"></td>
+            </tr>
+            <tr>
+                <td>Luas lingkaran (cm²)</td>
+                <td>:</td>
+                <td><input type="text" id="luas" placeholder="Luas lingkaran (cm²)" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <!-- <td><button onclick="hitungLuas()">Hitung Luas</button></td> -->
+                <td><input type="button" value="Hitung" onclick="hitungLuas()"></td>
+            </tr>
+
+        </table>
+    </form>
+        <script>
+        function hitungLuas() {
+            const radius = parseFloat(document.getElementById('radius').value);
+            
+            if (isNaN(radius) || radius <= 0) {
+                alert('Silakan masukkan jari-jari yang valid.');
+                return;
+            }
+
+            const luas = Math.PI * Math.pow(radius, 2);
+            document.getElementById('luas').value = luas.toFixed(2) + ' cm²';
+        }
+    </script>
+</body>
+</html>

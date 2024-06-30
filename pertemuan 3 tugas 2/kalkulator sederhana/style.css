@@ -1,0 +1,32 @@
+.h2{
+    display: inline;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c71212;
+}
+.calculator {
+    background: rgb(49, 44, 44);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+.calculator button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
