@@ -53,6 +53,21 @@
     <button onclick="jalankanSoal5()">Bandingkan</button>
     <p>Hasil perbandingan ketat: <span id="hasil_soal5"></span></p>
 
+    //tugas onclick/my function
+    <h2>mengubah gambar dengan button</h2>
+    <img id="gambar" src="1.jpg" alt="gambar satu">
+    <br>
+    <button onclick="ubahGambar()">click me</button>
+    <br>
+
+
+    //inputan untuk mengecek nilai yang bukan string
+    <label for="inputValue">masukan nilai: </label>
+    <input type="text" id="inputValue" value="">
+    <button onclick="cekTipe()">cek tipenya cuy</button> 
+
+    <p>hasilna: <span id="hasilCek"></span></p>
+
     <script>
       // soal 1
       function soal1(a, b) {
@@ -111,6 +126,28 @@
         let x = document.getElementById("soal5_x").value;
         let hasil = soal5(z, x);
         document.getElementById("hasil_soal5").innerText = hasil;
+      }
+
+      //javascript di head element
+      function ubahGambar() {
+        const gamabr = document.getElementById('gambar');
+        gambar.src = "2.jpg"
+        gambar.alt = "gambar 2"
+      }
+
+
+      //inputan untuk mengecek nilai yang bukan string
+      function cekTipe() {
+        const nilai = document.getElementById('inputValue').value;
+        const hasilCek = document.getElementById('hasilCek');
+
+        if (typeof nilai === 'string' && !isNaN(Number(nilai))) {
+          hasilCek.textContent = "nilai string yang mewakili angka"
+        } else if (typeof nilai !== 'string') {
+          hasilCek.textContent = "bukan bertipe string";
+        } else {
+          hasilCek.textContent = "yap, bertipe string" ;
+        }
       }
     </script>
   </body>
