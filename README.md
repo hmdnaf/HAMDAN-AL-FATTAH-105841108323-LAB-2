@@ -1,1 +1,3 @@
 # HAMDAN-AL-FATTAH-105841108323-LAB-2
+nim: 105841108323
+kelas/prodi: 2-c/informatika
